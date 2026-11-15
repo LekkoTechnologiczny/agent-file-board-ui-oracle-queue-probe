@@ -216,3 +216,10 @@ the status, a refused send falls back to unsigned, the decision ignores the sele
 persona). The cryptographic signing, the guards `signingDelivery` re-checks after each await,
 key-file parsing and composer rendering are covered by `Signer` traces and by unit and
 browser tests.
+
+## Shared Oracle execution
+
+All actual model and trace TLC work uses the shared Oracle queue; see
+[Oracle queue usage](../docs/ORACLE-TLA-QUEUE.md). Runtime trace collection and
+status orchestration retain their existing local behavior. Missing remote
+execution is a failed/incomplete check, never a local fallback.
