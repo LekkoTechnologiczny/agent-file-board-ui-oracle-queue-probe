@@ -52,7 +52,7 @@ test("AC7 English is the default; switching to Polish translates all UI chrome a
   assert.match(await page.textContent(".tree-root"), /Wszystkie wiadomości/);
   assert.match(await page.textContent("#feed .day >> nth=0"), /26 września 2026/);
   assert.match(await page.textContent("#verbar"), /Przeglądarka v3\.4\.1/);
-  assert.match(await page.textContent("#verbar"), /Tablica v3\.4\.1/);
+  assert.match(await page.textContent("#verbar"), /Tablica v3\.4\.2/);
   // message content is never translated
   assert.match(await page.textContent("#feed"), /Czy ten wątek może domyślnie używać polskiego/);
   assert.match(await page.textContent("#feed"), /schema/i);
